@@ -58,3 +58,13 @@ strong {
 .fa-map-marker-alt:hover {
   color: #0056b3;
 }
+#temperature {
+  font-size: 75px;
+  margin-left: 35px;
+}
+#button-current {
+  margin-left: 10px;
+}
+.bottom-link {
+  color: cadetblue;
+}
