@@ -30,7 +30,7 @@ export default function () {
               type="submit"
               value="current"
               className="form-control btn btn-success shadow-sm w-100"
-              id="button-current"
+              className="button-current"
             />
           </div>
         </div>

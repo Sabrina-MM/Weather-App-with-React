@@ -62,7 +62,7 @@ strong {
   font-size: 75px;
   margin-left: 35px;
 }
-#button-current {
+.button-current {
   margin-left: 10px;
 }
 .bottom-link {
