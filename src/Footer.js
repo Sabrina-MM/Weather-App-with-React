@@ -7,6 +7,7 @@ export default function () {
         href="https://github.com/Sabrina-MM/Weather-app"
         class="bottom-link"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Open-source code,
       </a>
