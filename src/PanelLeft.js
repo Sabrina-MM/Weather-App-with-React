@@ -2,7 +2,7 @@ import React from "react";
 import Sun from "./sun-cloudy.png";
 import DayPanelLeft from "./DayPanelLeft";
 
-export default function () {
+export default function PanelLeft() {
   return (
     <div className="pane-left ">
       <DayPanelLeft />

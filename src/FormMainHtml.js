@@ -14,7 +14,6 @@ export default function () {
               placeHolder="Type a city.."
               autoFocus="on"
               autoComplete="off"
-              id="city-input"
               className="form-control shadow-sm"
             />
           </div>
@@ -30,7 +29,6 @@ export default function () {
               type="submit"
               value="current"
               className="form-control btn btn-success shadow-sm w-100"
-              className="button-current"
             />
           </div>
         </div>
