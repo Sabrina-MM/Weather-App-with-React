@@ -4,7 +4,7 @@ export default function () {
   return (
     <div className="bottom">
       <a
-        href="https://github.com/Sabrina-MM/Weather-app"
+        href="https://github.com/Sabrina-MM/weather-react"
         className="bottom-link"
         target="_blank"
         rel="noopener noreferrer"
