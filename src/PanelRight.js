@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function () {
+export default function PanelRight() {
   let weatherData = {
     humidity: 53,
     realFeelValue: 13,

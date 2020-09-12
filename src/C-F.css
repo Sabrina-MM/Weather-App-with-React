@@ -10,12 +10,12 @@ a:hover {
 h5 {
   padding-top: 0.5rem;
 }
-#cel-fahrenheit {
+.cel-fahrenheit {
   position: relative;
   top: -105px;
   left: 250px;
 }
 
-#cel-fahrenheit:hover {
+.cel-fahrenheit:hover {
   color: #0056b3;
 }
