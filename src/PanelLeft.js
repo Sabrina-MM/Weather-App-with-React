@@ -25,7 +25,7 @@ export default function PanelLeft() {
     setDescription(response.data.weather[0].main);
   }
 
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=Madrid&appid=5df05ec20f5c5b50f9ac557495988486&units=metric`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=5df05ec20f5c5b50f9ac557495988486&units=metric`;
 
   axios.get(url).then(handlerWeather);
 
@@ -41,9 +41,7 @@ export default function PanelLeft() {
         src={`http://openweathermap.org/img/wn/${logo}@2x.png`}
         alt="weather"
       />
-      <span className="temp" className="temperature">
-        {Math.round(temperature)}
-      </span>
+      <span className="temp">{Math.round(temperature)}</span>
       <div className="cel-fahrenheit">
         <a href="/">°C </a>|<a href="/">°F</a>
       </div>
