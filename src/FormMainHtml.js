@@ -3,7 +3,7 @@ import PanelRight from "./PanelRight";
 import PanelLeft from "./PanelLeft";
 import TypeCity from "./TypeCity";
 
-export default function () {
+export default function FormMainHtml() {
   return (
     <div className="card-bodyfirstbox border 1px solid" color="#dee2e6">
       <TypeCity city="London" />
