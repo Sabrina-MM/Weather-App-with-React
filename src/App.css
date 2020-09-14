@@ -1,3 +1,9 @@
+.pane-right {
+  float: right;
+  margin-top: 23px;
+  margin-right: 66px;
+  font-size: 21px;
+}
 .footer {
   font-size: 12px;
 }
