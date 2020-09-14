@@ -38,6 +38,7 @@ export default function PanelLeft() {
         </span>
       </div>
       <img
+        className="main-img"
         src={`http://openweathermap.org/img/wn/${logo}@2x.png`}
         alt="weather"
       />

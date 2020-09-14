@@ -11,24 +11,26 @@ ul {
   display: flex;
   margin-bottom: 25px;
 }
+.col-2 {
+  flex: 0 0 25%;
+  max-width: 17.5%;
+}
 
 .col-6 {
   flex: 0 0 80%;
   max-width: 65%;
 }
 
-.img-center {
-  float: left;
-  width: 92px;
-  margin-left: 41px;
-  margin-top: 18px;
+.main-img {
+  vertical-align: bottom;
+  border-style: none;
 }
 .fa-map-marker-alt:hover {
   color: #0056b3;
 }
 .temp {
   font-size: 75px;
-  margin-left: 35px;
+  margin-left: 17px;
 }
 
 .bottom-link {
