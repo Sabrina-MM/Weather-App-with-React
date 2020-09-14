@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import SettingDateAndTime from "./SettingDateAndTime";
 import "./index.css";
 import "./C-F.css";
 
@@ -11,7 +12,7 @@ export default function Weather(props) {
     setWeatherData({
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
-      date: "Wednesday, 10:30 hs",
+      date: new Date(response.data.dt * 1000),
       city: response.data.name,
       icon: response.data.weather[0].icon,
       description: response.data.weather[0].main,
@@ -57,7 +58,9 @@ export default function Weather(props) {
             {weatherData.city},{weatherData.country}
           </h1>
 
-          <div>{weatherData.date}</div>
+          <div>
+            <SettingDateAndTime date={weatherData.date} />
+          </div>
           <div className="text-capitalize">{weatherData.description}</div>
         </div>
         <div className="pane-right">
