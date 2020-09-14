@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="bottom">
+    <div className="footer">
       <a
         href="https://github.com/Sabrina-MM/weather-react"
         className="bottom-link"
@@ -11,9 +11,7 @@ export default function Footer() {
       >
         Open-source code,
       </a>
-      <i>
-        <small>by Sabrina Marisol Martinez</small>
-      </i>
+      <i>by Sabrina Marisol Martinez</i>
     </div>
   );
 }

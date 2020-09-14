@@ -29,17 +29,18 @@ export default function TypeCity() {
             placeholder="Type a city..."
             onChange={upDateCity}
             className="form-control shadow-sm"
+            autoFocus="on"
           />
         </div>
 
-        <div className="row-2">
+        <div className="col-2">
           <input
             type="submit"
             value="Search"
             className="form-control btn btn-primary shadow-sm w-100"
           />
         </div>
-        <div className="row-2">
+        <div className="col-2">
           <input
             type="submit"
             value="current"

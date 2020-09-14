@@ -1,3 +1,6 @@
+.footer {
+  font-size: 12px;
+}
 strong {
   font-size: 60px;
 }
@@ -6,15 +9,9 @@ ul {
 }
 .row {
   display: flex;
-  margin-bottom: 38px;
-  flex-wrap: wrap;
-  margin-left: -15px;
+  margin-bottom: 25px;
 }
 
-.row-2 {
-  flex: 0 0 25%;
-  max-width: 16%;
-}
 .col-6 {
   flex: 0 0 80%;
   max-width: 65%;
@@ -33,9 +30,7 @@ ul {
   font-size: 75px;
   margin-left: 35px;
 }
-.btn-success {
-  margin-left: 10px;
-}
+
 .bottom-link {
   color: cadetblue;
 }

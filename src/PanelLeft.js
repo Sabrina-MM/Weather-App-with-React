@@ -34,7 +34,7 @@ export default function PanelLeft() {
       <h5>{resultDay}</h5>
       <div className="howTheWetherIs">
         <span>
-          <small className="small">{description} 10:30 hs</small>
+          <small className="description">{description} 10:30 hs</small>
         </span>
       </div>
       <img
