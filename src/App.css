@@ -18,20 +18,19 @@ ul {
   max-width: 65%;
 }
 
-.main-img {
-  vertical-align: bottom;
-  border-style: none;
-}
 .fa-map-marker-alt:hover {
   color: #0056b3;
 }
 .temp {
-  font-size: 75px;
+  font-size: 72px;
   margin-left: 17px;
 }
 
 .bottom-link {
   color: cadetblue;
+}
+.img {
+  margin-left: 10px;
 }
 .pane-right {
   float: right;
