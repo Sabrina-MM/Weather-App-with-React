@@ -1,6 +1,7 @@
 import React from "react";
 import SettingDateAndTime from "./SettingDateAndTime";
 import ReactAnimatedWeather from "react-animated-weather";
+import WeatherTemperature from "./WeatherTemperature";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
@@ -32,13 +33,11 @@ export default function WeatherInfo(props) {
           </li>
         </ul>
       </div>
+
       <div className="img">
         <WeatherIcon code={props.data.icon} />
-        <span className="temp">{Math.round(props.data.temperature)}</span>
       </div>
-      <div className="cel-fahrenheit">
-        <a href="/">°C </a>|<a href="/">°F</a>
-      </div>
+      <WeatherTemperature celsius={props.data.temperature} />
     </div>
   );
 }
