@@ -7,7 +7,7 @@ import "./C-F.css";
 
 export default function App() {
   return (
-    <div className="container" style={{ maxWidth: 830 }}>
+    <div className="container" style={{ maxWidth: 700 }}>
       <div className="card-bodyfirstbox border 1px solid" color="#dee2e6">
         <Weather defaultCity="London" />
         <div>
