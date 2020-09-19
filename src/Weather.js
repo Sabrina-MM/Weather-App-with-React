@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 import "./index.css";
 import "./C-F.css";
@@ -40,7 +41,7 @@ export default function Weather(props) {
 
   if (result) {
     return (
-      <div>
+      <div className="weather">
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-6">
@@ -57,19 +58,20 @@ export default function Weather(props) {
               <input
                 type="submit"
                 value="Search"
-                className="form-control btn btn-primary shadow-sm w-100"
+                className="form-control btn btn-info shadow-sm w-100"
               />
             </div>
             <div className="col-2">
               <input
                 type="submit"
                 value="Current"
-                className="form-control btn btn-success shadow-sm w-100"
+                className="form-control btn btn-outline-info shadow-sm w-100"
               />
             </div>
           </div>
         </form>
         <WeatherInfo data={weatherData} />
+        <WeatherForecast city={weatherData.city} />
       </div>
     );
   } else {

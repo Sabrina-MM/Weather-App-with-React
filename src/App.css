@@ -29,6 +29,7 @@ ul {
   line-height: 64px;
   font-weight: 400;
   margin-left: 10px;
+  display: inline-block;
 }
 
 .bottom-link {
