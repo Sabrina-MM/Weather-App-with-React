@@ -1,3 +1,8 @@
 .WeatherForecast {
-  margin-top: 100px;
+  margin-top: 115px;
+  text-align: center;
+}
+.iconForecast {
+  display: block;
+  margin: 5px;
 }

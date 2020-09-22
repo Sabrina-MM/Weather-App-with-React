@@ -8,7 +8,6 @@ ul {
 }
 .row {
   display: flex;
-  margin-bottom: 25px;
 }
 .col-2 {
   flex: 0 0 25%;
@@ -44,9 +43,13 @@ ul {
   margin-right: 66px;
   font-size: 21px;
 }
+.pane-left {
+  margin-top: 30px;
+}
 .footer {
   font-size: 12px;
+  margin-top: 8px;
 }
 .float-left {
-  margin-top: 15px;
+  margin-top: 23px;
 }
