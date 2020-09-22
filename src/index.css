@@ -3,7 +3,7 @@
   margin: auto;
 }
 .container {
-  color: black;
+  color: #878787;
   padding: 44px;
   margin-right: auto;
   margin-left: auto;
@@ -13,7 +13,7 @@
   box-sizing: border-box;
   padding: 20px;
   padding-top: 20px;
-  background-image: linear-gradient(to top, #fff1eb 0%, #c2e6f7 100%);
+  background-image: linear-gradient(to top, #fff1eb 0%, #dff5ff 100%);
   border-radius: 4px;
   font-family: arial, sans-serif;
   line-height: 1.2;
