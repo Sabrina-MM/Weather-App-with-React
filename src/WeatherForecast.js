@@ -9,7 +9,6 @@ export default function WeatherForecast(props) {
   const [forecast, setForecast] = useState(null);
 
   function handleForecastResponse(response) {
-    console.log(response.data.list);
     setForecast(response.data);
     setLoaded(true);
   }

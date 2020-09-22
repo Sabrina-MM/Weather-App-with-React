@@ -11,7 +11,11 @@ export default function WeatherForecastList(props) {
   function temperature() {
     let maxTemperature = Math.round(props.data.main.temp_max);
     let minTemperature = Math.round(props.data.main.temp_min);
-    return `${maxTemperature}/${minTemperature}`;
+    return (
+      <div>
+        <strong>{maxTemperature}</strong>/{minTemperature}°
+      </div>
+    );
   }
   return (
     <div className="WeatherForecastList col">
