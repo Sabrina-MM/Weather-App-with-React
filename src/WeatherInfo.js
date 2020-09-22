@@ -29,7 +29,7 @@ export default function WeatherInfo(props) {
             <ReactAnimatedWeather icon="WIND" color="black" size={20} />
           </li>
           <li className="real-feel">
-            Real Feel : {Math.round(props.data.realFeelValue)} °
+            Real Feel : {Math.round(props.data.realFeelValue)}°
           </li>
         </ul>
       </div>
