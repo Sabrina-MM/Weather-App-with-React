@@ -12,8 +12,8 @@ export default function App() {
         <div className="card-bodyfirstbox border 1px solid" color="#dee2e6">
           <Weather defaultCity="London" />
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }
