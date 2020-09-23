@@ -43,14 +43,13 @@ export default function Weather(props) {
     axios.get(url).then(<WeatherInfo />);
     axios.get(url).then(<WeatherForecast />);
   }
-
   function getCurrentLocation() {
     navigator.geolocation.getCurrentPosition(showCurrenLocation);
   }
+
   function handleSubmit(event) {
     event.preventDefault();
     search();
-    getCurrentLocation();
   }
 
   function handleCity(event) {
@@ -64,7 +63,7 @@ export default function Weather(props) {
           <div className="row">
             <div className="col-6">
               <input
-                type="Search"
+                type="search"
                 placeholder="Type a city..."
                 className="form-control shadow-sm"
                 autoFocus="on"
@@ -81,10 +80,10 @@ export default function Weather(props) {
             </div>
             <div className="col-2">
               <input
-                type="submit"
+                type="button"
                 value="Current"
                 className="form-control btn btn-outline-info shadow-sm w-100"
-                onChange={getCurrentLocation}
+                onClick={getCurrentLocation}
               />
             </div>
           </div>
