@@ -1,15 +1,14 @@
 a {
-  color: black;
+  color: cadetblue;
   text-decoration: none;
   background-color: transparent;
 }
 a:hover {
-  color: #0056b3;
+  color: cadetblue;
   text-decoration: none;
 }
 
 .unit {
-  color: #212121;
   color: #212121;
   position: relative;
   line-height: 1;

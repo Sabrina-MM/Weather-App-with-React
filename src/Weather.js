@@ -81,7 +81,7 @@ export default function Weather(props) {
             <div className="col-2">
               <input
                 type="button"
-                value="Current"
+                value="Location"
                 className="form-control btn btn-outline-info shadow-sm w-100"
                 onClick={getCurrentLocation}
               />
