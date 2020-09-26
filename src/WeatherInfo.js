@@ -2,9 +2,23 @@ import React from "react";
 import SettingDateAndTime from "./SettingDateAndTime";
 import ReactAnimatedWeather from "react-animated-weather";
 import WeatherTemperature from "./WeatherTemperature";
+import { WiSunrise } from "weather-icons-react";
+import { WiSunset } from "weather-icons-react";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
+  function setSunUp() {
+    let sunRise = new Date(props.data.sunrise);
+    let hoursSunRise = sunRise.getHours();
+    return `${hoursSunRise}:00 am `;
+  }
+
+  function setSunSet() {
+    let sunSet = new Date(props.data.sunset);
+    let hoursSunSet = sunSet.getHours();
+    return ` ${hoursSunSet}:00 pm `;
+  }
+
   return (
     <div className="WeatherInfo">
       <div className="pane-left ">
@@ -30,6 +44,13 @@ export default function WeatherInfo(props) {
           </li>
           <li className="real-feel">
             Real Feel : {Math.round(props.data.realFeelValue)}°
+          </li>
+          <li>
+            <small>
+              {setSunUp()}
+              <WiSunrise size={24} color="goldenrod" />;{setSunSet()}{" "}
+              <WiSunset size={24} color="saddlebrown" />;
+            </small>
           </li>
         </ul>
       </div>
