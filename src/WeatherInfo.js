@@ -36,11 +36,11 @@ export default function WeatherInfo(props) {
         <ul>
           <li className="humidity">
             Humidity: {props.data.humidity} %{" "}
-            <ReactAnimatedWeather icon="RAIN" color="black" size={20} />
+            <ReactAnimatedWeather icon="RAIN" color="cadetblue" size={20} />
           </li>
           <li className="wind">
             Wind : {props.data.wind} km/h{" "}
-            <ReactAnimatedWeather icon="WIND" color="black" size={20} />
+            <ReactAnimatedWeather icon="WIND" color="cadetblue" size={20} />
           </li>
           <li className="real-feel">
             Real Feel : {Math.round(props.data.realFeelValue)}°
@@ -48,8 +48,8 @@ export default function WeatherInfo(props) {
           <li>
             <small>
               {setSunUp()}
-              <WiSunrise size={24} color="goldenrod" />;{setSunSet()}{" "}
-              <WiSunset size={24} color="saddlebrown" />;
+              <WiSunrise size={24} color="goldenrod" />
+              {setSunSet()} <WiSunset size={24} color="saddlebrown" />
             </small>
           </li>
         </ul>
