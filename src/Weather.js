@@ -23,7 +23,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       country: response.data.sys.country,
       sunrise: response.data.sys.sunrise * 1000,
-      sunset: response.data.sys.sunrise * 1000,
+      sunset: response.data.sys.sunset * 1000,
     });
 
     setResult(true);
