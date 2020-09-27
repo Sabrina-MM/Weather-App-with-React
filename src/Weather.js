@@ -15,15 +15,16 @@ export default function Weather(props) {
     setWeatherData({
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
-      date: new Date(response.data.dt * 1000),
+      date: new Date(response.data.dt),
+      timezone: response.data.timezone,
       city: response.data.name,
       icon: response.data.weather[0].icon,
       description: response.data.weather[0].main,
       realFeelValue: response.data.main.feels_like,
       humidity: response.data.main.humidity,
       country: response.data.sys.country,
-      sunrise: response.data.sys.sunrise * 1000,
-      sunset: response.data.sys.sunset * 1000,
+      sunrise: new Date(response.data.sys.sunrise),
+      sunset: new Date(response.data.sys.sunset),
     });
 
     setResult(true);

@@ -1,29 +1,27 @@
 import React from "react";
+import moment from "moment";
 
 export default function SettingDateAndTime(props) {
   let days = [
+    "Saturday",
     "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday",
   ];
 
-  let day = days[props.date.getDay()];
-  let hours = props.date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = props.date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+  var finalHours = moment
+    .unix(props.data.date)
+    .utcOffset(props.data.timezone / 60)
+    .format("HH:mm");
+
+  let day = days[props.data.date.getDay()];
 
   return (
     <div>
-      {day} {hours}:{minutes}
+      {day} {finalHours}
     </div>
   );
 }

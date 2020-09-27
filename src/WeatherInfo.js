@@ -5,18 +5,24 @@ import WeatherTemperature from "./WeatherTemperature";
 import { WiSunrise } from "weather-icons-react";
 import { WiSunset } from "weather-icons-react";
 import WeatherIcon from "./WeatherIcon";
+import moment from "moment";
 
 export default function WeatherInfo(props) {
   function setSunUp() {
-    let sunRise = new Date(props.data.sunrise);
-    let hoursSunRise = sunRise.getHours();
-    return `${hoursSunRise}:00 am `;
+    let sunUp = moment
+      .unix(props.data.sunrise)
+      .utcOffset(props.data.timezone / 60)
+      .format("HH:mm");
+
+    return `${sunUp} `;
   }
 
   function setSunSet() {
-    let sunSet = new Date(props.data.sunset);
-    let hoursSunSet = sunSet.getHours();
-    return ` ${hoursSunSet}:00 pm `;
+    let sunSet = moment
+      .unix(props.data.sunset)
+      .utcOffset(props.data.timezone / 60)
+      .format("HH:mm");
+    return ` ${sunSet}`;
   }
 
   return (
@@ -27,7 +33,7 @@ export default function WeatherInfo(props) {
         </h1>
 
         <div>
-          <SettingDateAndTime date={props.data.date} />
+          <SettingDateAndTime data={props.data} />
         </div>
         <div className="text-capitalize">{props.data.description}</div>
       </div>
