@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
+
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 
-import "./index.css";
-import "./C-F.css";
+import { APIKEY } from "../../constants";
 
 export default function Weather(props) {
   const [result, setResult] = useState(false);
@@ -31,7 +31,7 @@ export default function Weather(props) {
   }
 
   function search() {
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=5df05ec20f5c5b50f9ac557495988486&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKEY}&units=metric`;
 
     axios.get(url).then(handleResponse);
   }
@@ -39,10 +39,9 @@ export default function Weather(props) {
   function showCurrenLocation(position) {
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
-    let apiKey = "5df05ec20f5c5b50f9ac557495988486";
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKEY}&units=metric`;
     axios.get(url).then(handleResponse);
-    url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIKEY}&units=metric`;
     axios.get(url).then(<WeatherInfo />);
     axios.get(url).then(<WeatherForecast />);
   }
@@ -64,7 +63,7 @@ export default function Weather(props) {
       <div className="weather">
         <form onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-6">
+            <div className="col-5">
               <input
                 type="search"
                 placeholder="Type a city..."
@@ -74,14 +73,14 @@ export default function Weather(props) {
               />
             </div>
 
-            <div className="col-2">
+            <div className="col-3">
               <input
                 type="submit"
                 value="Search"
                 className="form-control btn btn-info shadow-sm w-100"
               />
             </div>
-            <div className="col-2">
+            <div className="col-3">
               <input
                 type="button"
                 value="Location"
