@@ -50,3 +50,11 @@ ul {
 .float-left {
   margin-top: 23px;
 }
+.WeatherForecast {
+  margin-top: 115px;
+  text-align: center;
+}
+.iconForecast {
+  display: block;
+  margin: 5px;
+}
